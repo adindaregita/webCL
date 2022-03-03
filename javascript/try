@@ -1,0 +1,35 @@
+const IMAGEBASEURL = 'https://image.tmdb.org/t/p/w500'
+
+const showMovies = (movies) => {
+    let HTMLCard = ''
+    const container = document.getElementById('container')
+
+    for (let index = 0; index < movies.length; index++) {
+        const allMov = movies[index]
+
+        const year = new Date(allMov.release_date).getFullYear()
+
+        HTMLCard += `
+        <a href="/detail/${allMov.id}" class="card">
+            <img class="card__image" src="${IMGPATH}/${allMov.poster_path}"/>
+            <div class="card__content">
+                <p class="card__title">${allMov.title} (${year})</p>
+            </div>
+        </a>
+        `
+    }
+
+    
+
+    container.innerHTML = HTMLCard
+}
+
+window.addEventListener('DOMContentLoaded', () => {
+    fetch(`https://api.themoviedb.org/3/discover/movie?api_key=${APIKEY}`)
+        .then((res) => res.json())
+        .then((allMov) => {
+            const rez = allMov.rez
+
+            showMovies(rez)
+        })
+})

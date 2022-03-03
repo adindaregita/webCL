@@ -1,0 +1,80 @@
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search Movies</title>
+
+    <link rel="stylesheet" href="css/index.css">
+</head>
+
+<body id="body">
+    <nav>
+        <div>
+            <p>Movies Website</p>
+        </div>
+        <div>        
+            <h2 class="logo">Movie App</h2>
+            <a href="index.html" class="nav__link">Home</a>
+            <a href="category.html" class="nav__link">Category</a>
+            <a href="#" class="nav__link">About Us</a>
+        </div>
+    </nav>
+
+    <section id="search-page">
+        <div>
+            <p id="search-box">Search Your Movies</p>
+            <form action="" id="form">
+                <input type="text" id="search" placeholder="i.e. avengers">
+                <button type="button" id="btn" onclick={handleEvents()}>Search</button>
+            </form>
+        </div>
+    </section>
+
+
+
+
+    <section id="search-result">
+        <div id="movie-name">
+            <h2 id="search-title">Movie Title</h2>
+        </div>
+        <div id="results">
+            
+        </div>
+    </section>
+
+   
+
+    
+    <section id="offline-page">
+        <div id="message-box">
+            <p id="message">You are not connected to the internet</p>
+            <button type="button" id="back" onclick={handleBack()}>Back</button>
+        </div>
+    </section>
+
+
+    <section id="details-page">
+        <div id="card">
+            <button id="close" onclick={handleClose()}>
+                Close
+            </button>
+            <div id="card-body">
+                <p id="card-name">Movie Name</p>
+                <img src="Posters.jpg" alt="" id="card-img">
+                <p id="card-title"><strong>Title : </strong><span id="title">Tittle</span></p>
+                <p id="card-rating"><strong>Rating : </strong><span id="rating">0.0</span></p>
+                <p id="card-language"><strong>Language : </strong><span id="language">Language</span></p>
+                <p id="card-date"><strong>Release Date : </strong><span id="date">0000-00-00</span></p>
+                <p id="card-description"><strong>Description  : </strong><span id="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem soluta earum architecto esse atque alias eveniet optio illum! Atque commodi similique fugit! Molestiae, quam illo.</span></p>
+            </div>
+        </div>
+    </section>
+
+
+    <script src="api-key.js"></script>
+    <script src="javascript/index.js"></script>
+</body>
+
+</html>
